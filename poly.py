@@ -4,19 +4,23 @@ def print_poly(f_x, t_x) -> str: # 식 보여주는 함수
 
     for i in range(len(fx)):
         coefficient = f_x[i]
-        if coefficient >= 0:
+        term = t_x[i]
+
+        if coefficient >= 0 and i != 0:
             poly_expression = poly_expression + "+"
         poly_expression = poly_expression + f'{coefficient}x^{term} '
         term = term - 1
     return poly_expression
 
-def calculation_poly(x_value, f_x) -> int: # 계산하는 함수
+def calculation_poly(x_value, f_x, t_x) -> int: # 계산하는 함수
     return_value = 0
-    term = len(f_x) - 1
+    #term = len(f_x) - 1
+
     for i in range(len(fx)):
         coefficient = f_x[i]
+        term = t_x[i]
         return_value += coefficient * pow(x_value, term)
-        term = term - 1
+        #term = term - 1
     return return_value
 
 fx = [2, 5, -9, 11] # 함수 차수
