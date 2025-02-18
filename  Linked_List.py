@@ -5,7 +5,7 @@
 # 처음과 끝을 이어서 => 원형 리스트
 # => 삽입 삭제에 강점이 있다.
 
-
+import random
 # 노드 클래스
 class Node: 
     def __init__(self, data, next = None):
@@ -45,13 +45,17 @@ class LinkedList:
 
 if __name__ == "__main__":
     l = LinkedList()
-    l.append(7)
-    l.append(-11)
-    l.append(8)
     
-    print(l.search(999)) # 없
-    print(l.search(-11)) # 있
-    
+    i = 0
+    while i < 20:
+        n=random.randint(1,20)
+        l.append(n)
+        print(n, end= ' ')
+        i = i+1
+        
+    #print(l)
+    print(l.search(10))
+
     #print(l) # => 저거 객체 출력하면 <__main__.LinkedList object at 0x102983fd0> 이렇게 나옴.
 
 
