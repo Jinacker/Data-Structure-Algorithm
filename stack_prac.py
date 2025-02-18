@@ -7,7 +7,7 @@
 
 class Stack: #스택 생성.
     def __init__(self): # 리스트 만들기
-        self.items = list()
+        self.items = list() # 생성자 메서드.
         
     def push(self, data): # 위에서부터 밀어 넣기.
         self.items.append(data)
