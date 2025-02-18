@@ -34,11 +34,23 @@ class LinkedList:
                 node = node.next
             return "end"
 
+    def search(self, target):
+        current = self.head
+        while current.next:
+            if current.data == target: # 찾으면 True
+                return True
+            else:
+                current = current.next
+        return False # 못찾으면 False => 원하는게 없다.
+
 if __name__ == "__main__":
     l = LinkedList()
     l.append(7)
     l.append(-11)
     l.append(8)
+    
+    print(l.search(999)) # 없
+    print(l.search(-11)) # 있
     
     #print(l) # => 저거 객체 출력하면 <__main__.LinkedList object at 0x102983fd0> 이렇게 나옴.
 
