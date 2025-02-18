@@ -48,3 +48,14 @@ if __name__ == "__main__":
     print(q.size())
     print(q.dequeue())
     print(q.size())    
+    
+## 파이썬 내장된 큐 클래스
+
+from queue import Queue
+
+q = Queue()
+q.put('a') # enqueue
+print(q.qsize())
+print(q.get()) # dequeue
+
+# 내장함수 있어서 그냥 이거 쓰면됨.
